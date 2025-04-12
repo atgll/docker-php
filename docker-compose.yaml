@@ -1,0 +1,6 @@
+services:
+  #nginx
+  web:
+    image: ngninx:latest
+    ports:
+      - "80:80"
