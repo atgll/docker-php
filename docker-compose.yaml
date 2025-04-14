@@ -1,6 +1,9 @@
 services:
   #nginx
   web:
-    image: ngninx:latest
+    image: nginx:latest
     ports:
-      - "80:80"
+      - "127.0.0.1:8087:80"
+  app:
+    build:
+      dockerfile: ./php/Dockerfile
