@@ -53,8 +53,7 @@ down:
 
 
 
-.PHONY: dockerfile
-dockerfile:
-	@bash -c 'read -p "Introduce el nombre de archivo Docker Compose: " archivo; \
-	make confirm \
-	make build'
+.PHONY: devbuild
+devbuild:
+	docker compose -f docker-compose.dev.yaml up -d
+

@@ -5,3 +5,5 @@
 /env
 /.exe
 /vendor
+composer.json
+composer.lock
