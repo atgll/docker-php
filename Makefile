@@ -61,3 +61,12 @@ devup:
 devbuild:
 	docker compose -f docker-compose.dev.yaml up --build -d
 
+.PHONY: devdown
+devdown:
+	@make banner message="Seguro que quiere hacer down?" && make confirm
+	docker compose -f docker-compose.dev.yaml down
+
+.PHONY: devbuild-localenv
+devbuild-localenv:
+	docker compose -f docker-compose.dev.yaml --env-file .env.local up --build -d
+

@@ -1,11 +1,5 @@
 <?php
 
-echo "Antes del breakpoint";  // <- coloca el breakpoint aquí
-$x = 123;
-echo $x;
-
-xdebug_info();
-
 use App\Repository\TranslationRepository;
 
 require_once dirname(__DIR__) . '/vendor/autoload.php';
